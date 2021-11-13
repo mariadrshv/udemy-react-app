@@ -2,13 +2,13 @@ import './ExpenseItem.css';
 import ExpenseDate from './ExpenseDate';
 import Card from './Card';
 
-function ExpenseItem (ExpenseItemProps) {
+function ExpenseItem ({date, title, amount}) {
     return (
         <Card className="expense-item">
-            <ExpenseDate date={ExpenseItemProps.date}/>
+            <ExpenseDate date={date}/>
             <div className="expense-item__description">
-                <h2>{ExpenseItemProps.title}</h2>
-                <div className="expense-item__price">${ExpenseItemProps.amount}</div>
+                <h2>{title}</h2>
+                <div className="expense-item__price">${amount}</div>
             </div>
         </Card>
     )
