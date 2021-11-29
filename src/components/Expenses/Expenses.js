@@ -6,7 +6,7 @@ function Expenses ({expenses}) {
     return (
     <Card className='expenses'>
         {expenses && expenses.map(exp=> (
-            <ExpenseItem {...exp}/>
+            <ExpenseItem key={exp.id} {...exp}/>
         ))}
     </Card>
     );
